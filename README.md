@@ -1,12 +1,20 @@
 # Go
 
-Awesome Go.
+There are awesome go samples.
 
-- [Go语言英文网](http://docs.studygolang.com/)
-- [Go语言中文网](https://studygolang.com/)
+Also yoou can visit official go sites to know more.
+
+> - [Go语言英文网](http://docs.studygolang.com/)
+> - [Go语言中文网](https://studygolang.com/)
 
 
-## Goenv(Linux only)
+## Contents
+
+Maybe later...
+
+
+
+## Goenv
 
 Download corresponding package from official site then run as follows: 
 
@@ -23,6 +31,7 @@ macOS can use homebrew install go with command: `brew install go`.
 
 ```Go
 $ go build source.go  // compile and install packages
+$ go run source.go    // run the go file
 $ go install packages // same with go build but without compile
 
 ```
@@ -70,6 +79,3 @@ func main() { // function, if there is init(), then first run func is init().
 
 
 
-## Coming soon...
-
-Next stage ready to learn Go language to found something funny!
