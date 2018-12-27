@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package main
+=======
+package parse
+>>>>>>> 777c5bda2501a2e54ee844b2181a09c4b2b19e4c
 
 import (
         "fmt"
@@ -6,12 +10,15 @@ import (
         "strconv"
 )
 
+<<<<<<< HEAD
 //
 // 自定义包实现者应该遵守的最佳实践:
 //      在包内部，总是应该从 panic 中 recover：不允许显式的超出包范围的 panic()
 //      向包的调用者返回错误值（而不是 panic）
 //
 
+=======
+>>>>>>> 777c5bda2501a2e54ee844b2181a09c4b2b19e4c
 type ParseError struct {
         Index   int
         Word string 
@@ -50,6 +57,7 @@ func fields2numbers(fields []string) (numbers []int) {
         }
         return 
 }
+<<<<<<< HEAD
 
 func main() {
         var examples = []string{
@@ -70,3 +78,5 @@ func main() {
                 fmt.Println(nums)
         }
 }
+=======
+>>>>>>> 777c5bda2501a2e54ee844b2181a09c4b2b19e4c
