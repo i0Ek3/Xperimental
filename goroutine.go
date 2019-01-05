@@ -9,7 +9,7 @@ func main() {
         fmt.Println("-----------use channel--------")
         ch := make(chan string)
         go sendData(ch)
-        go getData(ch)
+        getData(ch)
         time.Sleep(1e9)
 
         fmt.Println("\n---------use goruntines-------")
@@ -39,12 +39,16 @@ func sendData(ch chan string) {
         ch <- "C"
         ch <- "D"
         ch <- "E"
+        close(ch)
 }
 
 func getData(ch chan string) {
         //var input string
         for {
-                input := <- ch
+                input, open := <-ch
+                if !open {
+                        break
+                }
                 fmt.Printf("%s ", input)
         }
 }
