@@ -2,15 +2,11 @@
 
 There are awesome go samples.
 
-Also yoou can visit official go sites to know more.
+Also you can visit official go sites to know more.
 
 > - [Go语言英文网](http://docs.studygolang.com/)
 > - [Go语言中文网](https://studygolang.com/)
 
-
-## Contents
-
-Maybe later...
 
 
 
@@ -27,7 +23,7 @@ $ export PATH=$PATH:/usr/local/go/bin` and add this line in your /etc/profile.
 macOS can use homebrew install go with command: `brew install go`.
 
 
-## Build
+## Build & Run
 
 ```Go
 $ go build source.go  // compile and install packages
@@ -76,6 +72,13 @@ func main() { // function, if there is init(), then first run func is init().
 
 - 不要试图make()一个结构体，这样会引发一个编译错误
 - 不要试图new()一个映射，这样会引发运行时错误
+- 使用锁的情景：
+    - 访问共享数据结构中的缓存信息
+    - 保存应用程序上下文和状态信息数据
+- 使用通道的情景：
+    - 与异步操作的结果进行交互
+    - 分发任务
+    - 传递数据所有权
 
 
 
