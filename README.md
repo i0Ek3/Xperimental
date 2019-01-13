@@ -79,6 +79,6 @@ func main() { // function, if there is init(), then first run func is init().
     - 与异步操作的结果进行交互
     - 分发任务
     - 传递数据所有权
-
+- [More...](https://github.com/Unknwon/the-way-to-go_ZH_CN/blob/master/eBook/16.0.md)
 
 
