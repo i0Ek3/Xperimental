@@ -4,9 +4,14 @@ There are awesome go samples.
 
 Also you can visit official go sites to know more.
 
-> - [Go语言英文网](http://docs.studygolang.com/)
-> - [Go语言中文网](https://studygolang.com/)
+- [Go语言英文网](http://docs.studygolang.com/)
+- [Go语言中文网](https://studygolang.com/)
 
+And there are some important links to know go news and run go code easily.
+
+- [https://blog.golang.org](https://blog.golang.org)
+- [https://talks.golang.org](https://talks.golang.org)
+- [https://play.golang.org](https://play.golang.org)
 
 
 
