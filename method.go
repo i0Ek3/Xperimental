@@ -14,6 +14,12 @@ type Ints struct {
         a, b int
 }
 
+type TZ int
+
+//type A struct {
+//        name string
+//}
+
 func main() {
         i1 := new(Ints)
         i1.a = 3
@@ -26,6 +32,17 @@ func main() {
         fmt.Printf("i2.a + i2.b = %d\n", i2.AddInts())
 
         fmt.Printf("Ivector{1, 2, 3} = %d\n", Ivector{1, 2, 3}.Sum())
+        
+        var a TZ
+        a.Print() // method value
+        (*TZ).Print(&a) // method expression
+    
+}
+
+// 方法可以访问私有字段，即其访问权限是比较高的。
+func (a *TZ) Print() {
+        //a.name = "john"
+        fmt.Println("TZ")
 }
 
 func (it *Ints) AddInts() int {
