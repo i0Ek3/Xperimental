@@ -1,23 +1,10 @@
-# Go
+# Go Learing
 
-There are awesome go samples.
+Some Go examples with tests.
 
-Also you can visit official go sites to know more.
+## Install Goenv
 
-- [Go语言英文网](http://docs.studygolang.com/)
-- [Go语言中文网](https://studygolang.com/)
-
-And there are some important links to know go news and run go code easily.
-
-- [https://blog.golang.org](https://blog.golang.org)
-- [https://talks.golang.org](https://talks.golang.org)
-- [https://play.golang.org](https://play.golang.org)
-
-
-
-## Goenv
-
-Download corresponding package from official site then run as follows: 
+Download corresponding package from official site then run as follows command: 
 
 ```Shell
 $ sudo tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
@@ -25,7 +12,7 @@ $ export PATH=$PATH:/usr/local/go/bin` and add this line in your /etc/profile.
 
 ```
 
-macOS can use homebrew install go with command: `brew install go`.
+If you use macOS, just run command: `brew install go`.
 
 
 ## Build & Run
@@ -75,15 +62,15 @@ func main() { // function, if there is init(), then first run func is init().
 
 ## Note
 
-- 不要试图make()一个结构体，这样会引发一个编译错误
-- 不要试图new()一个映射，这样会引发运行时错误
-- 使用锁的情景：
-    - 访问共享数据结构中的缓存信息
-    - 保存应用程序上下文和状态信息数据
-- 使用通道的情景：
-    - 与异步操作的结果进行交互
-    - 分发任务
-    - 传递数据所有权
-- [More...](https://github.com/Unknwon/the-way-to-go_ZH_CN/blob/master/eBook/16.0.md)
+- [go_tests#ysk](https://github.com/i0Ek3/go_tests#ysk)
+
+
+## Links you want to know
+
+- [Go语言英文网](http://docs.studygolang.com/)
+- [Go语言中文网](https://studygolang.com/)
+- [https://blog.golang.org](https://blog.golang.org)
+- [https://talks.golang.org](https://talks.golang.org)
+- [https://play.golang.org](https://play.golang.org)
 
 
