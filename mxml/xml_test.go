@@ -4,6 +4,8 @@ import (
 	"encoding/xml"
 	"strings"
 	"testing"
+
+	a "asrt"
 )
 
 func TestMyXML(t *testing.T) {
@@ -14,7 +16,5 @@ func TestMyXML(t *testing.T) {
 	got := mxml(p)
 	want := true
 
-	if got != want {
-		t.Errorf("got %v want %v", got, want)
-	}
+	a.Asrt(t, got, want)
 }

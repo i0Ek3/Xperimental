@@ -2,6 +2,8 @@ package s2
 
 import (
 	"testing"
+
+	a "asrt"
 )
 
 func TestEmbed(t *testing.T) {
@@ -12,7 +14,5 @@ func TestEmbed(t *testing.T) {
 	got := membed(i, o, m)
 	want := false
 
-	if got != want {
-		t.Errorf("got %v want %v", got, want)
-	}
+	a.Asrt(t, got, want)
 }

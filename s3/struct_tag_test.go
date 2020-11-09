@@ -2,6 +2,8 @@ package s3
 
 import (
 	"testing"
+
+	a "asrt"
 )
 
 func TestTag(t *testing.T) {
@@ -10,8 +12,5 @@ func TestTag(t *testing.T) {
 	got := mtag(tt)
 	want := true
 
-	//asrt(t, got, want)
-	if got != want {
-		t.Errorf("got %v want %v", got, want)
-	}
+	a.Asrt(t, got, want)
 }

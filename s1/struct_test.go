@@ -1,6 +1,10 @@
 package s1
 
-import "testing"
+import (
+	"testing"
+
+	a "asrt"
+)
 
 func TestStruct(t *testing.T) {
 	b := test{i: 1, f: 1.01, s: "1.01"}
@@ -8,7 +12,5 @@ func TestStruct(t *testing.T) {
 	got := mystruct(b)
 	want := true
 
-	if got != want {
-		t.Errorf("got %v want %v", got, want)
-	}
+	a.Asrt(t, got, want)
 }

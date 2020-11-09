@@ -5,7 +5,8 @@ import (
 	"testing"
 )
 
-func asrt(t *testing.T, got, want interface{}) {
+// Asrt compares the give value
+func Asrt(t *testing.T, got, want interface{}) {
 	if !reflect.DeepEqual(got, want) {
 		t.Errorf("got %v want %v", got, want)
 	}
