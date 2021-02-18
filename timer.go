@@ -1,8 +1,8 @@
-package main 
+package main
 
 import (
-        "fmt"
-        "time"
+	"fmt"
+	"time"
 )
 
 // Timer为定时器，Ticker为计时器
@@ -14,23 +14,20 @@ import (
 // }
 //
 // 结果通道是必须要带缓冲的
-// ch := make(chan int, 1) 
-
-
 
 func main() {
-        tick := time.Tick(1e8)
-        boom := time.After(5e8) // 只发送一次时间
-        for {
-                select {
-                case <- tick:
-                        fmt.Println("tick.")
-                case <- boom:
-                        fmt.Println("Boom!")
-                        return
-                default:
-                        fmt.Println("   .")
-                        time.Sleep(5e7)
-                }
-        }
+	tick := time.Tick(1e8)
+	boom := time.After(5e8) // 只发送一次时间
+	for {
+		select {
+		case <-tick:
+			fmt.Println("tick.")
+		case <-boom:
+			fmt.Println("Boom!")
+			return
+		default:
+			fmt.Println("   .")
+			time.Sleep(5e7)
+		}
+	}
 }
