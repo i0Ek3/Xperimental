@@ -1,6 +1,6 @@
 # Go Learing
 
-Some Go examples with tests.
+Go examples for myself to learn Go.
 
 ## Install Goenv
 
@@ -31,11 +31,14 @@ $ go install packages // same with go build but without compile
 //go.go
 //there is no ; as end of every code sentence, cause of this task did by compiler automatically.
 
-package main // which belongs to.
+package main // which belongs to
 
-import "fmt" // package implementing formatted I/O.
-//import fm "fmt" // alias.
-import os // imported and not used: os, cause of there is no need for `os`.
+import "fmt" // package implementing formatted I/O
+//import fm "fmt" // alias
+//import . "fmt" // not recommend
+import os // imported and not used: os, cause of there is no need for `os`
+//import _ "pkg" // only use init() in pkg
+//import "abc/def" // can use all pkgs under of def/
 
 
 //
@@ -72,5 +75,4 @@ func main() { // function, if there is init(), then first run func is init().
 - [https://blog.golang.org](https://blog.golang.org)
 - [https://talks.golang.org](https://talks.golang.org)
 - [https://play.golang.org](https://play.golang.org)
-
 
