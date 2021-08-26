@@ -8,7 +8,7 @@ type Sorter interface {
 	Len() int
 	Less(i, j int) bool
 	Swap(i, j int)
-}
+
 
 func Sort(data Sorter) {
 	for i := 0; i < data.Len(); i++ {

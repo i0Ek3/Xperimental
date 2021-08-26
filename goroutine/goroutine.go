@@ -5,6 +5,10 @@ import (
         "time"
 )
 
+func test() {
+    fmt.Println("Can you show me?")
+}
+
 func main() {
         fmt.Println("-----------use channel--------")
         ch := make(chan string)
@@ -19,6 +23,9 @@ func main() {
         fmt.Println("Sleeping in main()...")
         time.Sleep(10 * 1e9)
         fmt.Println("Ending in main()!")
+
+        go test()
+        fmt.Println("hi, this is a test.")
 }
 
 func long() {
