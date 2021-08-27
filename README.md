@@ -1,4 +1,4 @@
-# Go Learing
+# Go Learning
 
 Go examples for myself to learn Go.
 
