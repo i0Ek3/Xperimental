@@ -76,3 +76,12 @@ func main() { // function, if there is init(), then first run func is init().
 - [https://talks.golang.org](https://talks.golang.org)
 - [https://play.golang.org](https://play.golang.org)
 
+
+## Credit
+
+- [https://github.com/talkgo/read](https://github.com/talkgo/read)
+- [https://golang.iswbm.com/index.html](https://golang.iswbm.com/index.html)
+- [https://github.com/kevinyan815/gocookbook](https://github.com/kevinyan815/gocookbook)
+- [https://github.com/eddycjy/go-developer-roadmap](https://github.com/eddycjy/go-developer-roadmap)
+- [https://github.com/0voice/Introduction-to-Golang](https://github.com/0voice/Introduction-to-Golang)
+- [https://github.com/chai2010/advanced-go-programming-book/blob/master/SUMMARY.md](https://github.com/chai2010/advanced-go-programming-book/blob/master/SUMMARY.md)
