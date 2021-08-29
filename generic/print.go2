@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func Prn[T any] (s []T) {
+    for _, v := range s {
+        fmt.Print(v)
+    }
+}
+
+func main() {
+    Prn([]string{"hi, ", "i0Ek3\n"})
+    Prn([]int{1, 2, 3})
+}
