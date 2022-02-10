@@ -9,7 +9,6 @@ Download corresponding package from official site then run as follows command:
 ```Shell
 $ sudo tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 $ export PATH=$PATH:/usr/local/go/bin` and add this line in your /etc/profile.
-
 ```
 
 If you use macOS, just run command: `brew install go`.
@@ -21,7 +20,6 @@ If you use macOS, just run command: `brew install go`.
 $ go build source.go  // compile and install packages
 $ go run source.go    // run the go file
 $ go install packages // same with go build but without compile
-
 ```
 
 
@@ -42,9 +40,7 @@ import os // imported and not used: os, cause of there is no need for `os`
 
 
 //
-// func functionName(/*parameter_list*/ param1 type1, param2 type2, ...) (/*return_value_list*/ ret1 type1, ret2 type2, ...) {
-//       ...
-// }
+// func functionName(/*parameter_list*/ param1 type1, param2 type2, ...) (/*return_value_list*/ ret1 type1, ret2 type2, ...) { //... }
 //
 
 
