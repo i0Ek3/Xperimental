@@ -1,1 +1,4 @@
 *.DS_Store
+
+*fetch
+net/fetch2/log.txt
