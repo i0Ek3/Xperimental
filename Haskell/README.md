@@ -4,7 +4,7 @@
 
 ## Why Haskell?
 
-    打不到的空气人,学不会的Haskell.
+    打不到的空气人，学不会的Haskell。
 
 ## Build
 

@@ -1,0 +1,145 @@
+"".main STEXT size=118 args=0x0 locals=0x40 funcid=0x0 align=0x0
+	0x0000 00000 (add.go:10)	TEXT	"".main(SB), ABIInternal, $64-0
+	0x0000 00000 (add.go:10)	CMPQ	SP, 16(R14)
+	0x0004 00004 (add.go:10)	PCDATA	$0, $-2
+	0x0004 00004 (add.go:10)	JLS	111
+	0x0006 00006 (add.go:10)	PCDATA	$0, $-1
+	0x0006 00006 (add.go:10)	SUBQ	$64, SP
+	0x000a 00010 (add.go:10)	MOVQ	BP, 56(SP)
+	0x000f 00015 (add.go:10)	LEAQ	56(SP), BP
+	0x0014 00020 (add.go:10)	FUNCDATA	$0, gclocals·69c1753bd5f81501d95132d08af04464(SB)
+	0x0014 00020 (add.go:10)	FUNCDATA	$1, gclocals·568470801006e5c0dc3947ea998fe279(SB)
+	0x0014 00020 (add.go:10)	FUNCDATA	$2, "".main.stkobj(SB)
+	0x0014 00020 (add.go:11)	MOVL	$1, AX
+	0x0019 00025 (add.go:11)	MOVL	$2, BX
+	0x001e 00030 (add.go:11)	PCDATA	$1, $0
+	0x001e 00030 (add.go:11)	NOP
+	0x0020 00032 (add.go:11)	CALL	"".add(SB)
+	0x0025 00037 (add.go:11)	MOVUPS	X15, ""..autotmp_9+40(SP)
+	0x002b 00043 (add.go:11)	PCDATA	$1, $1
+	0x002b 00043 (add.go:11)	CALL	runtime.convT64(SB)
+	0x0030 00048 (add.go:11)	LEAQ	type.int64(SB), CX
+	0x0037 00055 (add.go:11)	MOVQ	CX, ""..autotmp_9+40(SP)
+	0x003c 00060 (add.go:11)	MOVQ	AX, ""..autotmp_9+48(SP)
+	0x0041 00065 (<unknown line number>)	NOP
+	0x0041 00065 ($GOROOT/src/fmt/print.go:274)	MOVQ	os.Stdout(SB), BX
+	0x0048 00072 ($GOROOT/src/fmt/print.go:274)	LEAQ	go.itab.*os.File,io.Writer(SB), AX
+	0x004f 00079 ($GOROOT/src/fmt/print.go:274)	LEAQ	""..autotmp_9+40(SP), CX
+	0x0054 00084 ($GOROOT/src/fmt/print.go:274)	MOVL	$1, DI
+	0x0059 00089 ($GOROOT/src/fmt/print.go:274)	MOVQ	DI, SI
+	0x005c 00092 ($GOROOT/src/fmt/print.go:274)	PCDATA	$1, $0
+	0x005c 00092 ($GOROOT/src/fmt/print.go:274)	NOP
+	0x0060 00096 ($GOROOT/src/fmt/print.go:274)	CALL	fmt.Fprintln(SB)
+	0x0065 00101 (add.go:12)	MOVQ	56(SP), BP
+	0x006a 00106 (add.go:12)	ADDQ	$64, SP
+	0x006e 00110 (add.go:12)	RET
+	0x006f 00111 (add.go:12)	NOP
+	0x006f 00111 (add.go:10)	PCDATA	$1, $-1
+	0x006f 00111 (add.go:10)	PCDATA	$0, $-2
+	0x006f 00111 (add.go:10)	CALL	runtime.morestack_noctxt(SB)
+	0x0074 00116 (add.go:10)	PCDATA	$0, $-1
+	0x0074 00116 (add.go:10)	JMP	0
+	0x0000 49 3b 66 10 76 69 48 83 ec 40 48 89 6c 24 38 48  I;f.viH..@H.l$8H
+	0x0010 8d 6c 24 38 b8 01 00 00 00 bb 02 00 00 00 66 90  .l$8..........f.
+	0x0020 e8 00 00 00 00 44 0f 11 7c 24 28 e8 00 00 00 00  .....D..|$(.....
+	0x0030 48 8d 0d 00 00 00 00 48 89 4c 24 28 48 89 44 24  H......H.L$(H.D$
+	0x0040 30 48 8b 1d 00 00 00 00 48 8d 05 00 00 00 00 48  0H......H......H
+	0x0050 8d 4c 24 28 bf 01 00 00 00 48 89 fe 0f 1f 40 00  .L$(.....H....@.
+	0x0060 e8 00 00 00 00 48 8b 6c 24 38 48 83 c4 40 c3 e8  .....H.l$8H..@..
+	0x0070 00 00 00 00 eb 8a                                ......
+	rel 2+0 t=23 type.int64+0
+	rel 2+0 t=23 type.*os.File+0
+	rel 33+4 t=7 "".add+0
+	rel 44+4 t=7 runtime.convT64+0
+	rel 51+4 t=14 type.int64+0
+	rel 68+4 t=14 os.Stdout+0
+	rel 75+4 t=14 go.itab.*os.File,io.Writer+0
+	rel 97+4 t=7 fmt.Fprintln+0
+	rel 112+4 t=7 runtime.morestack_noctxt+0
+go.cuinfo.packagename. SDWARFCUINFO dupok size=0
+	0x0000 6d 61 69 6e                                      main
+go.info.fmt.Println$abstract SDWARFABSFCN dupok size=42
+	0x0000 05 66 6d 74 2e 50 72 69 6e 74 6c 6e 00 01 01 13  .fmt.Println....
+	0x0010 61 00 00 00 00 00 00 13 6e 00 01 00 00 00 00 13  a.......n.......
+	0x0020 65 72 72 00 01 00 00 00 00 00                    err.......
+	rel 0+0 t=22 type.[]interface {}+0
+	rel 0+0 t=22 type.error+0
+	rel 0+0 t=22 type.int+0
+	rel 19+4 t=31 go.info.[]interface {}+0
+	rel 27+4 t=31 go.info.int+0
+	rel 37+4 t=31 go.info.error+0
+""..inittask SNOPTRDATA size=32
+	0x0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+	0x0010 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 24+8 t=1 fmt..inittask+0
+"".add.args_stackmap SRODATA size=10
+	0x0000 02 00 00 00 06 00 00 00 00 00                    ..........
+go.itab.*os.File,io.Writer SRODATA dupok size=32
+	0x0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0010 44 b5 f3 33 00 00 00 00 00 00 00 00 00 00 00 00  D..3............
+	rel 0+8 t=1 type.io.Writer+0
+	rel 8+8 t=1 type.*os.File+0
+	rel 24+8 t=-32767 os.(*File).Write+0
+runtime.nilinterequal·f SRODATA dupok size=8
+	0x0000 00 00 00 00 00 00 00 00                          ........
+	rel 0+8 t=1 runtime.nilinterequal+0
+runtime.memequal64·f SRODATA dupok size=8
+	0x0000 00 00 00 00 00 00 00 00                          ........
+	rel 0+8 t=1 runtime.memequal64+0
+runtime.gcbits.01 SRODATA dupok size=1
+	0x0000 01                                               .
+type..namedata.*interface {}- SRODATA dupok size=15
+	0x0000 00 0d 2a 69 6e 74 65 72 66 61 63 65 20 7b 7d     ..*interface {}
+type.*interface {} SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 4f 0f 96 9d 08 08 08 36 00 00 00 00 00 00 00 00  O......6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*interface {}-+0
+	rel 48+8 t=1 type.interface {}+0
+runtime.gcbits.02 SRODATA dupok size=1
+	0x0000 02                                               .
+type.interface {} SRODATA dupok size=80
+	0x0000 10 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00  ................
+	0x0010 e7 57 a0 18 02 08 08 14 00 00 00 00 00 00 00 00  .W..............
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 24+8 t=1 runtime.nilinterequal·f+0
+	rel 32+8 t=1 runtime.gcbits.02+0
+	rel 40+4 t=5 type..namedata.*interface {}-+0
+	rel 44+4 t=-32763 type.*interface {}+0
+	rel 56+8 t=1 type.interface {}+80
+type..namedata.*[]interface {}- SRODATA dupok size=17
+	0x0000 00 0f 2a 5b 5d 69 6e 74 65 72 66 61 63 65 20 7b  ..*[]interface {
+	0x0010 7d                                               }
+type.*[]interface {} SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 f3 04 9a e7 08 08 08 36 00 00 00 00 00 00 00 00  .......6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*[]interface {}-+0
+	rel 48+8 t=1 type.[]interface {}+0
+type.[]interface {} SRODATA dupok size=56
+	0x0000 18 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 70 93 ea 2f 02 08 08 17 00 00 00 00 00 00 00 00  p../............
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*[]interface {}-+0
+	rel 44+4 t=-32763 type.*[]interface {}+0
+	rel 48+8 t=1 type.interface {}+0
+type..importpath.fmt. SRODATA dupok size=5
+	0x0000 00 03 66 6d 74                                   ..fmt
+gclocals·69c1753bd5f81501d95132d08af04464 SRODATA dupok size=8
+	0x0000 02 00 00 00 00 00 00 00                          ........
+gclocals·568470801006e5c0dc3947ea998fe279 SRODATA dupok size=10
+	0x0000 02 00 00 00 02 00 00 00 00 02                    ..........
+"".main.stkobj SRODATA static size=24
+	0x0000 01 00 00 00 00 00 00 00 f0 ff ff ff 10 00 00 00  ................
+	0x0010 10 00 00 00 00 00 00 00                          ........
+	rel 20+4 t=5 runtime.gcbits.02+0

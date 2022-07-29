@@ -1,4 +1,4 @@
-# Go Learning
+# Go Codes
 
 Go examples for myself to learn Go.
 
