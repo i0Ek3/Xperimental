@@ -6,6 +6,5 @@
 .vscode
 
 # binary and txt files
-net/fetch2/log.txt
-net/fetch/fetch
-net/fetch2/fetch
+Zig/zig-out
+Zig/zig-cache
