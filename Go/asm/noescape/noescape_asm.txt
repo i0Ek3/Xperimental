@@ -1,0 +1,47 @@
+"".test STEXT size=105 args=0x0 locals=0x420 funcid=0x0 align=0x0
+	0x0000 00000 (noescape.go:6)	TEXT	"".test(SB), ABIInternal, $1056-0
+	0x0000 00000 (noescape.go:6)	LEAQ	-928(SP), R12
+	0x0008 00008 (noescape.go:6)	CMPQ	R12, 16(R14)
+	0x000c 00012 (noescape.go:6)	PCDATA	$0, $-2
+	0x000c 00012 (noescape.go:6)	JLS	98
+	0x000e 00014 (noescape.go:6)	PCDATA	$0, $-1
+	0x000e 00014 (noescape.go:6)	SUBQ	$1056, SP
+	0x0015 00021 (noescape.go:6)	MOVQ	BP, 1048(SP)
+	0x001d 00029 (noescape.go:6)	LEAQ	1048(SP), BP
+	0x0025 00037 (noescape.go:6)	FUNCDATA	$0, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x0025 00037 (noescape.go:6)	FUNCDATA	$1, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x0025 00037 (noescape.go:7)	LEAQ	"".buf+24(SP), DI
+	0x002a 00042 (noescape.go:7)	PCDATA	$0, $-2
+	0x002a 00042 (noescape.go:7)	DUFFZERO	$0
+	0x003d 00061 (noescape.go:8)	PCDATA	$0, $-1
+	0x003d 00061 (noescape.go:8)	LEAQ	"".buf+24(SP), AX
+	0x0042 00066 (noescape.go:8)	MOVL	$1024, BX
+	0x0047 00071 (noescape.go:8)	MOVQ	BX, CX
+	0x004a 00074 (noescape.go:8)	PCDATA	$1, $0
+	0x004a 00074 (noescape.go:8)	CALL	"".noescape(SB)
+	0x004f 00079 (noescape.go:9)	MOVQ	BX, AX
+	0x0052 00082 (noescape.go:9)	MOVQ	1048(SP), BP
+	0x005a 00090 (noescape.go:9)	ADDQ	$1056, SP
+	0x0061 00097 (noescape.go:9)	RET
+	0x0062 00098 (noescape.go:9)	NOP
+	0x0062 00098 (noescape.go:6)	PCDATA	$1, $-1
+	0x0062 00098 (noescape.go:6)	PCDATA	$0, $-2
+	0x0062 00098 (noescape.go:6)	CALL	runtime.morestack_noctxt(SB)
+	0x0067 00103 (noescape.go:6)	PCDATA	$0, $-1
+	0x0067 00103 (noescape.go:6)	JMP	0
+	0x0000 4c 8d a4 24 60 fc ff ff 4d 3b 66 10 76 54 48 81  L..$`...M;f.vTH.
+	0x0010 ec 20 04 00 00 48 89 ac 24 18 04 00 00 48 8d ac  . ...H..$....H..
+	0x0020 24 18 04 00 00 48 8d 7c 24 18 48 89 6c 24 f0 48  $....H.|$.H.l$.H
+	0x0030 8d 6c 24 f0 e8 00 00 00 00 48 8b 6d 00 48 8d 44  .l$......H.m.H.D
+	0x0040 24 18 bb 00 04 00 00 48 89 d9 e8 00 00 00 00 48  $......H.......H
+	0x0050 89 d8 48 8b ac 24 18 04 00 00 48 81 c4 20 04 00  ..H..$....H.. ..
+	0x0060 00 c3 e8 00 00 00 00 eb 97                       .........
+	rel 53+4 t=7 runtime.duffzero+0
+	rel 75+4 t=7 "".noescape+0
+	rel 99+4 t=7 runtime.morestack_noctxt+0
+go.cuinfo.packagename. SDWARFCUINFO dupok size=0
+	0x0000 6e 6f 65 73 63 61 70 65                          noescape
+"".noescape.args_stackmap SRODATA size=12
+	0x0000 02 00 00 00 0c 00 00 00 01 00 09 00              ............
+gclocals·33cdeccccebe80329f1fdbee7f5874cb SRODATA dupok size=8
+	0x0000 01 00 00 00 00 00 00 00                          ........

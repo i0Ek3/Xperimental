@@ -284,10 +284,12 @@ func test14() {
 func test15() {
     c1 := make(chan int, 1000)
     
-    /* c1 is empty, deadlock
-    for v := range c1 {
+    // c1 is empty, deadlock
+    /*for v := range c1 {
         fmt.Println(v)
-    }*/
+    }
+    //close(c1)
+    */
     
     // main is so fast in order that go cannot excute
     // so this part cannot deadlock

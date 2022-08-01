@@ -8,3 +8,5 @@
 # binary and txt files
 Zig/zig-out
 Zig/zig-cache
+
+*.o

@@ -6,11 +6,11 @@ Know yourself and Go Assembly.
 ## Build
 
 ```Go
-$ go tool compile -S example/xxx/xxx.go
+$ go tool compile -S xxx.go
 
 # Or
 
-$ go build -gcflags -S example/xxx/xxx.go
+$ go build -gcflags -S xxx.go # need function body
 ```
 
 

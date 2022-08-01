@@ -1,0 +1,4 @@
+go.cuinfo.packagename. SDWARFCUINFO dupok size=0
+	0x0000 61 74 6f 6d 69 63                                atomic
+"".SwapInt32.args_stackmap SRODATA size=10
+	0x0000 02 00 00 00 06 00 00 00 01 01                    ..........
