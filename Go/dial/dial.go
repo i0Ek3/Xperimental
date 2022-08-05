@@ -19,8 +19,8 @@ func Dial() bool {
 func checkConnection(conn net.Conn, err error) bool {
 	if err != nil {
 		fmt.Printf("error %v connecting!", err)
-		return false
 		os.Exit(1)
+		return false
 	}
 	fmt.Printf("Connection is made with %v\n", conn)
 	return true

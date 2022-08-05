@@ -3,17 +3,16 @@ package main
 import "fmt"
 
 func main() {
-        var f = Adder()
-        fmt.Print(f(1), " ")
-        fmt.Print(f(1), " ")
-        fmt.Print(f(2), " ")
+	var f = Adder()
+	fmt.Print(f(1), " ")
+	fmt.Print(f(1), " ")
+	fmt.Print(f(2), " ")
 }
 
 func Adder() func(int) int {
-        var x int
-        return func(delta int) int {
-                x += delta
-                return x
-        }
-} 
-
+	var x int
+	return func(delta int) int {
+		x += delta
+		return x
+	}
+}
