@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-    number := make(chan bool)
-    letter := make(chan bool)
+    number := make(chan struct{})
+    letter := make(chan struct{})
 
     go func() {
         i := 1
@@ -18,7 +18,7 @@ func main() {
             fmt.Printf("%d%d", i, i+1)
             i += 2
             // notify letter goroutine to print
-            letter<-true
+            letter<-struct{}{}
         }
     }()
 
@@ -33,12 +33,12 @@ func main() {
             <-letter
             fmt.Print(string(i), string(i+1))
             // notify number goroutine to print
-            number<-true
+            number<-struct{}{}
         }
     }(&wg)
 
     // finished print action
-    number<-true
+    number<-struct{}{}
     // wait goroutines to exit
     wg.Wait()
 }
