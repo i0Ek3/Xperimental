@@ -6,7 +6,7 @@
 .vscode
 
 # binary and txt files
-Zig/zig-out
-Zig/zig-cache
+*/zig-out
+*/zig-cache
 
 *.o
