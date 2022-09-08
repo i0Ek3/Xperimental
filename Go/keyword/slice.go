@@ -3,10 +3,19 @@ package main
 import "fmt"
 
 func main() {
-	testCopy()
+	test()
 }
 
 func test() {
+	s := []int{5}
+	s = append(s, 6)
+	s = append(s, 7)
+	x := append(s, 11)
+	y := append(s, 12)
+	fmt.Println(s, x, y)
+}
+
+func test1() {
 	var arr = [5]int{1, 2, 3, 4, 5}
 	sum(arr[:])
 	fmt.Println("-------------------------")

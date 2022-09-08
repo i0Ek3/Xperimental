@@ -301,6 +301,22 @@ func test15() {
     }()
 }
 
+func test16() {
+	c := make(chan int, 1)
+	for done := false; !done; {
+		select {
+		default:
+			fmt.Println(1)
+		case <-c:
+			fmt.Println(2)
+			c = nil
+		case c <- 1:
+			fmt.Println(3)
+		}
+	}
+
+}
+
 func main() {
-	test15()
+	test16()
 }
