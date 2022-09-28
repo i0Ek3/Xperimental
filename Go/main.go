@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-    test4()
+    test6()
 }
 
 func test1() {
@@ -49,4 +49,26 @@ func test4() {
 			fmt.Println(3)
 		}
 	}
+}
+
+func test5() {
+    s := []string{"A", "B", "C"}
+    t := s[:1]
+    fmt.Println(&s[0] == &t[0])
+
+    u := append(s[:1], s[2:]...)
+    fmt.Println(&s[0] == &u[0])
+}
+
+type Test6 struct{}
+
+func test6() {
+    t := &Test6{}
+    defer t.Add(1).Add(2)
+    t.Add(3)
+}
+
+func (t *Test6) Add(x int) *Test6 {
+    fmt.Println(x)
+    return &Test6{}
 }
