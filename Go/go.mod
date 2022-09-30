@@ -3,6 +3,7 @@ module github.com/i0Ek3/go-learning
 go 1.16
 
 require (
+	fyne.io/fyne/v2 v2.2.3 // indirect
 	github.com/beego/bee/v2 v2.0.4 // indirect
 	github.com/beego/beego/v2 v2.0.5 // indirect
 	github.com/beego/goyaml2 v0.0.0-20130207012346-5545475820dd // indirect
