@@ -1,21 +1,10 @@
-# Python-fu
+# Python Example
 
-> Yes, fu means that word, f\*\*k you!
+## Reference
 
-`fu` is essentially a seq2seq model, but it is a misleading model to output the wrong result randomly from given sequences, so I named it `fu`.
-
-## Architecture
-
-comming soon...
-
-## Dataset
-
-comming soon...
-
-## Declaration
-
-DO NOT use this model on your productive enviornment, `fu` mading just for fun.
-
-## Credit
-
-You all guys who contribute on GitHub for ML/DL promotion.
+- https://docs.python.org
+- https://peps.python.org/pep-0008/
+- https://docs.python.org/3/library/index.html
+- https://docs.python.org/zh-cn/3/tutorial/whatnow.html
+- https://pycoders-weekly-chinese.readthedocs.io/en/latest/issue6/a-guide-to-pythons-magic-methods.html
+- https://chinese.freecodecamp.org/news/the-python-handbook/
