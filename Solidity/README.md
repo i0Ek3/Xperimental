@@ -1,4 +1,4 @@
-# Solidity
+# Solidity Notes
 
 ## YSK
 
@@ -23,7 +23,6 @@
   - value:
     - bool: true, false
     - address: 0xXXXXXXXXXX
-
 - store position
   - storage
     - default store position on the chain
@@ -35,13 +34,51 @@
     - but assign memory var to another memory var will create a ref, modify this ref will modify the original var
   - calldata
     - same with memory but used for function parameter and cannot modify immutable var
-
 - var scope
   - state
     - the data is stored in the variables on the chain, all in-contract functions can access it, and the gas consumption is high
   - local
   - global
+- some keywords
+  - constant/immutable
+    - these two keywords can save gas
+    - only number var can be declared as constant or immutable
+    - string and bytes can only declared as constant
+- control flow
+  - if (condition) {} else {}
+  - for (int i = 0; i < 10; i++) {}
+  - while (i < n) {}
+  - do {} while(i < n);
+  - condition ? true_expr : false_expr;
+- constructor
+  - used to initialize parameters in the contract
+- modifier
+  - define: modifier var_name
+  - commonly used methods to control smart contract permissions
+- **event**
+  - event is an abstraction of logs on EVM, it has two features:
+    - response
+    - cheaper: 2000 gas/event instead of 20000 gas on chain
 
-- credit
-  - https://remix.ethereum.org/
-  - https://github.com/AmazingAng/WTF-Solidity
+- **inheritance**
+  - rules: same with C++
+    - virtual
+    - override
+  - simple inheritance
+  - multiple inheritance
+  - modifier inheritance
+  - constructor inheritance
+- abstract contract
+  - if there is at least one unimplemented function in a smart contract, that is, a function lacks the content in the body {}, the contract must be marked as abstract, otherwise the compilation will report an error
+- interface
+  - bytes4 selector for each function in the contract and interface id contains in that
+- error(equals exception we always said)
+  - `error` needs `revert` to use, just like defer and recover in Go, **recommend**
+  - `require` just like exception in Python
+  - `assert` same with assert in Go
+
+## Credit
+
+- https://remix.ethereum.org/
+- https://github.com/AmazingAng/WTF-Solidity
+- https://gnidan.github.io/abi-to-sol/
