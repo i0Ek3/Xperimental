@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Vue Example</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 
+        {{message}}
+        {{message=="?"?"x":"y"}}
+        {{message.split('').reverse().join('')}}
+        -->
+
+        <input type="text" v-model="message">
+        <h2 v-if="message=='?!'">Thats right!</h2>
+        <h2 v-else-i="message=='!?'">Thats not right!</h2>
+        <h2 v-else>Oops~</h2>
+    </div>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                message:"?!",
+            }
+        })
+    </script>
+</body>
+</html>
