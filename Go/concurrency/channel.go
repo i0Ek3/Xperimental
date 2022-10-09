@@ -317,6 +317,22 @@ func test16() {
 
 }
 
+func test17() {
+	c := make(chan int, 10)
+
+	go func() {
+		for i := 0; i < 10; i++ {
+			c <- i
+		}
+        // if there is no close(), it will panic
+		close(c)
+	}()
+
+	for v := range c {
+		fmt.Println(v)
+	}
+}
+
 func main() {
-	test16()
+	test17()
 }
