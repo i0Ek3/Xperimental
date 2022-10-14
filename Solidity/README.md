@@ -20,7 +20,7 @@
     - address
   - permission: public, payable public
   - varName: N/A
-  - value:
+  - value
     - bool: true, false
     - address: 0xXXXXXXXXXX
 - store position
@@ -34,6 +34,7 @@
     - but assign memory var to another memory var will create a ref, modify this ref will modify the original var
   - calldata
     - same with memory but used for function parameter and cannot modify immutable var
+    - tell the smart contract which function I want to call and what the arguments are
 - var scope
   - state
     - the data is stored in the variables on the chain, all in-contract functions can access it, and the gas consumption is high
@@ -56,9 +57,11 @@
   - define: modifier var_name
   - commonly used methods to control smart contract permissions
 - **event**
-  - event is an abstraction of logs on EVM, it has two features:
+  - event is an abstraction of logs on EVM, it has two features
     - response
     - cheaper: 2000 gas/event instead of 20000 gas on chain
+  - use emit to release
+    - emit kinda like output of defer
 - **inheritance**
   - rules: same with C++
     - virtual
@@ -153,7 +156,7 @@
 
     - creat2()
       - to make the contract address independent of future events
-      - the contract address created with CREATE2 is determined by 4 parts:
+      - the contract address created with CREATE2 is determined by 4 parts
         - 0xFF
         - creator address
         - salt value
@@ -166,7 +169,68 @@
         - obtains a definite pair address
 
 - delete contract
+  
   - `selfdestruct(addr)`: delete the smart contract and transfer the remaining ETH of the contract to the specified address
+  
+- ABI Encode & Decode
+  
+  - standard for interaction with Ethereum smart contracts
+  
+  - contains five functions
+    - abi.encode
+  
+    - abi.encodePacked
+  
+    - abi.encodeWithSignature
+  
+    - abi.encodeWithSelector
+  
+    - abi.decode
+  
+  - In Ethereum, data must be encoded in bytecode to interact with the smart contract
+  
+- hash in Solidity
+  
+  - application
+    - generate a data unique identifier
+  
+    - encrypted signature
+  
+    - security encryption
+  
+  - functions
+    - keccak256(), different with sha3()
+  
+- selector
+  
+  - call the target function
+  
+- ERC20
+  
+  - a tokens standard in Ethereum, implement the basic logic of tokens transfer
+  
+  - IERC20 is the interface contract of the ERC20 token standard, which specifies the functions and events to be implemented by ERC20 token
+    - IERC20 defines two events
+      - Transfer: `event Transfer(address indexed from, address indexed to, uint256 value);`
+  
+      - Approval: `event Approval(address indexed owner, address indexed spender, uint256 value);`
+  
+    - IERC20 defines six functions
+      - totalSupply(): `function totalSupply() external view returns (uint256);`
+  
+      - balanceOf(): `function balanceOf(address account) external view returns (uint256);` 
+  
+      - transfer(): `function transfer(address to, uint256 amount) external returns (bool);`
+  
+      - allowance(): `function allowance(address owner, address spender) external view returns (uint256);`
+  
+      - approve(): `function approve(address spender, uint256 amount) external returns (bool);`
+  
+      - transferFrom(): `function transferFrom(address from, address to, uint256 amount) external returns (bool);`
+  
+- 
+
+  
 
 
 ## Credit
