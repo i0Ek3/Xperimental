@@ -23,6 +23,7 @@
   - value
     - bool: true, false
     - address: 0xXXXXXXXXXX
+  
 - store position
   - storage
     - default store position on the chain
@@ -35,33 +36,40 @@
   - calldata
     - same with memory but used for function parameter and cannot modify immutable var
     - tell the smart contract which function I want to call and what the arguments are
+  
 - var scope
   - state
     - the data is stored in the variables on the chain, all in-contract functions can access it, and the gas consumption is high
   - local
   - global
+  
 - some keywords
   - constant/immutable
     - these two keywords can save gas
     - only number var can be declared as constant or immutable
     - string and bytes can only declared as constant
+  
 - control flow
   - if (condition) {} else {}
   - for (int i = 0; i < 10; i++) {}
   - while (i < n) {}
   - do {} while(i < n);
   - condition ? true_expr : false_expr;
+  
 - constructor
   - used to initialize parameters in the contract
+  
 - modifier
   - define: modifier var_name
   - commonly used methods to control smart contract permissions
+  
 - **event**
   - event is an abstraction of logs on EVM, it has two features
     - response
     - cheaper: 2000 gas/event instead of 20000 gas on chain
   - use emit to release
     - emit kinda like output of defer
+  
 - **inheritance**
   - rules: same with C++
     - virtual
@@ -70,14 +78,18 @@
   - multiple inheritance
   - modifier inheritance
   - constructor inheritance
+  
 - abstract contract
   - if there is at least one unimplemented function in a smart contract, that is, a function lacks the content in the body {}, the contract must be marked as abstract, otherwise the compilation will report an error
+  
 - interface
   - bytes4 selector for each function in the contract and interface id contains in that
+  
 - error(equals exception we always said)
   - `error` needs `revert` to use, just like defer and recover in Go, **recommend**
   - `require` just like exception in Python
   - `assert` same with assert in Go
+  
 - function overloading: same with C++
   - functions with the same name but different input parameter types
   - but modifier overloading not allowed
@@ -228,8 +240,24 @@
   
       - transferFrom(): `function transferFrom(address from, address to, uint256 amount) external returns (bool);`
   
-- 
-
+- token faucet
+  
+  - the token faucet is a website/app that allows users to receive tokens for free
+  
+- airdrop contracts
+  
+  - airdrop is a marketing strategy in the currency circle, the project side will be free tokens issued to specific user groups
+  
+- ERC721
+  
+  - used to abstract non-homogeneous objects
+  - EIP: Ethereum Imporvement Proposals
+  - ERC: Ethereum Request For Comment
+  - ERC belongs EIP
+  - ERC165: used to check if an item is a smart contract
+  
+- dutch auction
+  
   
 
 
