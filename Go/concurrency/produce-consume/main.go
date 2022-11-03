@@ -8,7 +8,7 @@ import (
 )
 
 func Producer(out chan<- int) {
-	for i := 0; ; i++ {
+	for i := 0; i < 10; i++ {
 		out <- i * i
 	}
 }
@@ -20,7 +20,7 @@ func Consumer(input <-chan int) {
 }
 
 func main() {
-	ch := make(chan int, 64)
+	ch := make(chan int, 8)
 	go Producer(ch)
 	go Producer(ch)
 	go Consumer(ch)

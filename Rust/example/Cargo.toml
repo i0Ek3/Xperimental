@@ -1,0 +1,17 @@
+[package]
+name = "hust"
+version = "0.1.0"
+authors = ["i0Ek3 <kno30826@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[[bin]]
+name = "hust"
+path = "main.rs"
+
+[lib]
+name = "hust"
+path = "hust.rs"
