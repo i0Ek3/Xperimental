@@ -22,6 +22,8 @@ func WithDo() {
 }
 
 func main() {
+	fmt.Println("------WithOnce-------")
 	WithDo()
+	fmt.Println("-----WithCommon-------")
 	Common()
 }

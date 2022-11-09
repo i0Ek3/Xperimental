@@ -282,23 +282,23 @@ func test14() {
 }
 
 func test15() {
-    c1 := make(chan int, 1000)
-    
-    // c1 is empty, deadlock
-    /*for v := range c1 {
-        fmt.Println(v)
-    }
-    //close(c1)
-    */
-    
-    // main is so fast in order that go cannot excute
-    // so this part cannot deadlock
-    go func() {
-        // c1 is empty
-        for v := range c1 {
-            fmt.Println(v)
-        }
-    }()
+	c1 := make(chan int, 1000)
+
+	// c1 is empty, deadlock
+	/*for v := range c1 {
+	      fmt.Println(v)
+	  }
+	  //close(c1)
+	*/
+
+	// main is so fast in order that go cannot excute
+	// so this part cannot deadlock
+	go func() {
+		// c1 is empty
+		for v := range c1 {
+			fmt.Println(v)
+		}
+	}()
 }
 
 func test16() {
@@ -324,7 +324,7 @@ func test17() {
 		for i := 0; i < 10; i++ {
 			c <- i
 		}
-        // if there is no close(), it will panic
+		// if there is no close(), it will panic
 		close(c)
 	}()
 

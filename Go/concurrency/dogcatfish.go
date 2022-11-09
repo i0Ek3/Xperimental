@@ -34,8 +34,7 @@ func main() {
 		go Dog()
 		go Cat()
 		go Fish()
-
 	}
 	fish <- struct{}{}
-	time.Sleep(10 * time.Second)
+	time.Sleep(3 * time.Second)
 }

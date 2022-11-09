@@ -8,7 +8,8 @@ import (
 )
 
 func main() {
-	test2()
+    test3()
+	//test2()
 	//gotest()
 }
 
@@ -164,4 +165,18 @@ func test2() {
 	fmt.Println("readOps:", readOpsFinal)
 	writeOpsFinal := atomic.LoadUint64(&writeOps)
 	fmt.Println("writesOps:", writeOpsFinal)
+}
+
+func test3() {
+    c := make(chan int, 5)
+    go func() {
+        for i := 0; i < 10; i++ {
+            c <- i
+            fmt.Print("I'm in go func(): %d\n", c)
+        }
+    }()
+
+    for i := 0; i < 10; i++ {
+        fmt.Printf("I'm out of go func: %d\n", <-c)
+    }
 }

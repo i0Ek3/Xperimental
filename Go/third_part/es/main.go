@@ -18,8 +18,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
 	fmt.Println("connect to es success")
+
 	p := Person{Name: "i0Ek3", Age: 18, Married: false}
 	put, err := client.Index().
 		Index("user").

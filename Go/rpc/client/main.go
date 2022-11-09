@@ -35,7 +35,7 @@ func main() {
 			return
 		default:
 			time.Sleep(1 * time.Second)
-			fmt.Println("I'm here waitting for you.")
+			fmt.Println("I'm here waiting for you.")
 		}
 	}
 }

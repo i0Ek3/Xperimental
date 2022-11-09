@@ -4,7 +4,11 @@ import (
 	"database/sql/driver"
 	"encoding/json"
 	"log"
+
+	"gorm.io/gorm"
 )
+
+var GLOBAL_DB *gorm.DB
 
 type Info struct {
 	Name string
