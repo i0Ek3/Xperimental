@@ -1,11 +1,7 @@
-package main
+package std
 
 import (
-	"bufio"
-	"fmt"
 	"io"
-	"os"
-	"strconv"
 )
 
 // ref: https://pkg.go.dev/bufio@go1.19.3
@@ -197,21 +193,4 @@ type ReadWriter struct {
 
 func NewReadWriter(r *Reader, w *Writer) *ReadWriter {
 	return &ReadWriter{r, w}
-}
-
-func TestNewWriter() {
-	w := bufio.NewWriter(os.Stdout)
-	fmt.Fprint(w, "Hello, ")
-	fmt.Fprint(w, "world!")
-	for _, i := range []int64{1, 2, 3, 4} {
-		b := w.AvailableBuffer()
-		b = strconv.AppendInt(b, i, 10)
-		b = append(b, ' ')
-		w.Write(b)
-	}
-	w.Flush()
-}
-
-func main() {
-	TestNewWriter()
 }

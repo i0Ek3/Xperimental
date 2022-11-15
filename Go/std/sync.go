@@ -1,14 +1,9 @@
-package main
+package std
 
 import (
-	"bytes"
 	"internal/race"
-	"io"
 	"log"
-	"os"
-	"sync"
 	"sync/atomic"
-	"time"
 	"unsafe"
 )
 
@@ -439,31 +434,4 @@ func (wg *WaitGroup) Wait() {
 	// for loop to deal with wait situation
 	// if state >> 32 == 0 which means no need to wait
 	// otherwise increment waiters count
-}
-
-func TestPool() {
-	Log(os.Stdout, "path", "/search?q=flowers")
-}
-
-func Log(w io.Writer, key, val string) {
-	var bufPool = sync.Pool{
-		New: func() any {
-			return new(bytes.Buffer)
-		},
-	}
-	now := time.Unix(1136214245, 0)
-
-	b := bufPool.Get().(*bytes.Buffer)
-	b.Reset()
-	b.WriteString(now.UTC().Format(time.RFC3339))
-	b.WriteByte(' ')
-	b.WriteString(key)
-	b.WriteByte('=')
-	b.WriteString(val)
-	w.Write(b.Bytes())
-	bufPool.Put(b)
-}
-
-func main() {
-	TestPool()
 }

@@ -1,9 +1,7 @@
-package main
+package std
 
 import (
 	"errors"
-	"fmt"
-	"time"
 )
 
 // ref: https://pkg.go.dev/time@go1.19.3
@@ -117,79 +115,4 @@ func (t *Timer) Stop() bool {
 		panic("timer stopped")
 	}
 	return stopTimer(&t.r)
-}
-
-func statusUpdate() string { return "" }
-func TestTick() {
-	t := time.Tick(3 * time.Second)
-	for next := range t {
-		fmt.Printf("%v %s\n", next, statusUpdate())
-	}
-}
-
-func handle(int) {}
-func TestAfterSleep() {
-	var c chan int
-	select {
-	case m := <-c:
-		handle(m)
-	case <-time.After(1 * time.Second):
-		time.Sleep(100 * time.Microsecond)
-		fmt.Println("timed out")
-	}
-}
-
-func TestParseDuration() {
-	h, _ := time.ParseDuration("10h")
-	c, _ := time.ParseDuration("1h10m10s")
-	m, _ := time.ParseDuration("1µs")
-	n, _ := time.ParseDuration("1us")
-	fmt.Println(h, c, m, n)
-}
-
-func TestNewTicker() {
-	ticker := time.NewTicker(time.Second)
-	defer ticker.Stop()
-	done := make(chan bool)
-	go func() {
-		time.Sleep(3 * time.Second)
-		done <- true
-	}()
-	for {
-		select {
-		case <-done:
-			fmt.Println("done")
-			return
-		case t := <-ticker.C:
-			fmt.Println("current time:", t)
-		}
-	}
-}
-
-func TestAdd() {
-	start := time.Date(2009, 1, 1, 12, 0, 0, 0, time.UTC)
-	afterTenS := start.Add(10 * time.Second)
-	afterTenH := start.Add(10 * time.Hour)
-	fmt.Printf("start = %v\n", start)
-	fmt.Printf("after 10s = %v\n", afterTenS)
-	fmt.Printf("after 10h = %v\n", afterTenH)
-}
-
-func TestUnix() {
-	unixTime := time.Date(2009, time.November, 10, 23, 0, 0, 0, time.UTC)
-	fmt.Println(unixTime.Unix())
-	t := time.Unix(unixTime.Unix(), 0).UTC()
-	fmt.Println(t)
-}
-
-func main() {
-	recap()
-}
-
-func recap() {
-	o := fmt.Println
-	o(time.Now())
-	o(time.Now().Unix())
-	o(time.Date(2009, time.November, 10, 23, 0, 0, 0, time.UTC))
-	o(time.ParseDuration("1s2m3h"))
 }

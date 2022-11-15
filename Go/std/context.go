@@ -1,11 +1,9 @@
-package main
+package std
 
 // ref: https://cs.opensource.google/go/go/+/go1.19.3:src/context/context.go
 
 import (
-	"context"
 	"errors"
-	"fmt"
 	"time"
 )
 
@@ -110,98 +108,4 @@ func WithValue(parent Context, key, val any) Context {
 type valueCtx struct {
 	Context
 	key, val any
-}
-
-func TestWithCancel() {
-	gen := func(ctx context.Context) <-chan int {
-		dst := make(chan int)
-		n := 1
-		go func() {
-			for {
-				select {
-				case <-ctx.Done():
-					return
-				case dst <- n:
-					n++
-				}
-			}
-		}()
-		return dst
-	}
-
-	ctx, cancel := context.WithCancel(context.Background())
-	defer cancel()
-
-	for n := range gen(ctx) {
-		fmt.Println(n)
-		if n == 5 {
-			break
-		}
-	}
-}
-
-const shortDur = 1 * time.Millisecond
-
-func TestWithDeadline() {
-	d := time.Now().Add(shortDur)
-	ctx, cancel := context.WithDeadline(context.Background(), d)
-	defer cancel()
-
-	select {
-	case <-time.After(1 * time.Second):
-		fmt.Println("overslept")
-	case <-ctx.Done():
-		fmt.Println(ctx.Err())
-	}
-}
-
-func TestWithTimeout() {
-	ctx, cancel := context.WithTimeout(context.Background(), shortDur)
-	defer cancel()
-
-	select {
-	case <-time.After(1 * time.Second):
-		fmt.Println("overslept")
-	case <-ctx.Done():
-		fmt.Println(ctx.Err())
-	}
-}
-
-func TestWithValue() {
-	type CtxKey string
-	f := func(ctx context.Context, k CtxKey) {
-		if v := ctx.Value(k); v != nil {
-			fmt.Println("found:", v)
-			return
-		}
-		fmt.Println("not found:", k)
-	}
-
-	k := CtxKey("language")
-	ctx := context.WithValue(context.Background(), k, "Go")
-
-	f(ctx, k)
-	f(ctx, CtxKey("color"))
-}
-
-func main() {
-	//TestWithValue()
-	recap()
-}
-
-func recap() {
-	key := "hi"
-	d := time.Now().Add(shortDur)
-	ctx := context.WithValue(context.Background(), key, "there")
-	ctx, cancel := context.WithCancel(ctx)
-	ctx, cancel = context.WithTimeout(ctx, shortDur)
-	ctx, cancel = context.WithDeadline(ctx, d)
-	defer cancel()
-
-	select {
-	case <-time.After(1 * time.Second):
-		fmt.Println("overslept")
-	case <-ctx.Done():
-		fmt.Println("reason:", ctx.Err())
-	}
 }
