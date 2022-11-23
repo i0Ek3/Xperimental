@@ -16,7 +16,9 @@ type Resp struct {
 }
 
 func main() {
-	req := Req{A: 1, B: 2, Args: 2}
+	//req := Req{A: 1, B: 2, Args: 2}
+	//req := Req{A: 1, B: 0, Args: 2}
+	req := Req{A: 1, B: 2, Args: 3}
 	var resp Resp
 
 	cli, err := rpc.DialHTTP("tcp", "localhost:8888")
@@ -26,7 +28,7 @@ func main() {
 	// Call will wait until server finished out
 	// _ = cli.Call("Server.Add", req, &resp)
 
-	ca := cli.Go("Server.Add", req, &resp, nil)
+	ca := cli.Go("Server.Div", req, &resp, nil)
 
 	for {
 		select {
