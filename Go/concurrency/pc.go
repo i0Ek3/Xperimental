@@ -1,5 +1,7 @@
 package main
 
+// produce and consume model
+
 import (
 	"fmt"
 	"os"
