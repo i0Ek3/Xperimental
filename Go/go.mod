@@ -1,4 +1,4 @@
-module github.com/i0Ek3/go-learning
+module github.com/i0Ek3/Xperimental
 
 go 1.16
 
