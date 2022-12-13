@@ -24,12 +24,13 @@ func (c *ChanMutex) Unlock() {
 
 const TIMES = 100
 
-func (c *ChanMutex) Add(v int) {
+func (c *ChanMutex) Add() (res int) {
 	for i := 0; i < TIMES; i++ {
 		c.Lock()
-		v += i
+		res += i
 		c.Unlock()
 	}
+	return
 }
 
 type CommonMutex struct {
@@ -48,10 +49,11 @@ func (c *CommonMutex) Unlock() {
 	c.m.Unlock()
 }
 
-func (c *CommonMutex) Add(v int) {
+func (c *CommonMutex) Add() (res int) {
 	for i := 0; i < TIMES; i++ {
 		c.Lock()
-		v += i
+		res += i
 		c.Unlock()
 	}
+	return
 }
