@@ -301,6 +301,7 @@
 
 ## Credit
 
+- https://solidity-by-example.org
 - https://cryptozombies.io
 - https://remix.ethereum.org/
 - https://github.com/AmazingAng/WTF-Solidity
