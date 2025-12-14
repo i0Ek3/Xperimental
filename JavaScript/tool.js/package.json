@@ -1,0 +1,22 @@
+{
+  "name": "itool.js",
+  "version": "0.0.2",
+  "description": "A library tools for JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i0Ek3/tool.js.git"
+  },
+  "keywords": [
+    "tool.js"
+  ],
+  "author": "i0Ek3",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/i0Ek3/tool.js/issues"
+  },
+  "homepage": "https://github.com/i0Ek3/tool.js#readme"
+}
